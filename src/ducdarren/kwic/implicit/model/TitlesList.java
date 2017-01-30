@@ -22,6 +22,17 @@ public class TitlesList {
 		}
 		return result;
 	}
+	
+	protected int getLength() {
+		return titles.size();
+	}
+	
+	protected void setData(LinkedList<String> newList) {
+		titles = new LinkedList<LinkedList<String>>();
+		for (String s : newList) {
+			titles.add(tokenize(s));
+		}
+	}
 	 
 	private LinkedList<String> tokenize(String input) {
 		return (LinkedList<String>) Arrays.asList(input.split("\\s+"));

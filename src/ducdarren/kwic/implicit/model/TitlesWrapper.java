@@ -18,6 +18,10 @@ public class TitlesWrapper extends Observable {
 		return titlesList.getAllTitlesAsString();
 	}
 	
+	public void setData(LinkedList<String> newData) {
+		titlesList.setData(newData);
+	}
+	
 	private void broadcastChange(ListChangedEvent event) {
 	    setChanged();
 	    notifyObservers(event);
