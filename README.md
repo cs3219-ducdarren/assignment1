@@ -3,6 +3,8 @@
 |------|------------|-------------|
 |Matric. No. | A0147609X | A0144750J |
 
+## GitHub URL: https://github.com/cs3219-ducdarren/assignment1
+
 <!-- 
 1. Introduction
 up to 1 paragraph about the assignment. Specify who has done which implementation
