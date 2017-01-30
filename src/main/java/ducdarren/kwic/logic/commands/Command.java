@@ -11,11 +11,13 @@ import src.main.java.ducdarren.kwic.model.LineStorage;;
 public abstract class Command {
    
    protected LineStorage linesInStorage; 
+   protected LineStorage circularsStorage; 
 
    public abstract CommandResult execute();
 
-   public void setLinesInStorage(LineStorage linesInStorage) {
+   public void setStorages(LineStorage linesInStorage, LineStorage circularsStorage) {
         this.linesInStorage = linesInStorage;
+        this.circularsStorage = circularsStorage;
     }
 
 }
