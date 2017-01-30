@@ -35,8 +35,12 @@ public class Input {
 			BufferedReader reader = new BufferedReader(new FileReader(titlesFile));
 			String nextLine = reader.readLine();
 			while (nextLine != null) {
-				titles.addTitle(nextLine);
-				nextLine = reader.readLine();
+				if (nextLine.isEmpty()) {
+					nextLine = reader.readLine();
+				} else {
+					titles.addTitle(nextLine);
+					nextLine = reader.readLine();
+				}
 			}
 			reader.close();
 		} catch (FileNotFoundException exc) {
