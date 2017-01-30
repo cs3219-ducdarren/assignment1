@@ -12,7 +12,7 @@ public class Alphabetizer implements Observer{
   public void update(Observable source, Object data){
     TitlesWrapper circularsList = (TitlesWrapper) source;
     LinkedList<String> currentList = circularsList.getAllTitles();
-    Collections.sort(currentList);
+    Collections.sort(currentList, String.CASE_INSENSITIVE_ORDER);
     circularsList.setData(currentList);
   }
 }
