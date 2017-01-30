@@ -23,7 +23,7 @@ public class AddCommand extends Command {
     @Override
     public CommandResult execute() {
         try {
-            // add item
+            linesInStorage.addLine(toAdd);
             return new CommandResult(
                     String.format(MESSAGE_SUCCESS, toAdd)
         } catch (UniqueItemList.DuplicateItemException e) {
