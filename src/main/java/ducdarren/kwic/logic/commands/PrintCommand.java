@@ -13,7 +13,7 @@ public class PrintCommand extends Command {
 	@Override
 	public CommandResult execute() {
 		// need to try/catch duplicate later
-		linesInStorage.printCirculars();
+		linesInStorage.getCirculars();
 		return new CommandResult(String.format(MESSAGE_SUCCESS));
 	}
 }
