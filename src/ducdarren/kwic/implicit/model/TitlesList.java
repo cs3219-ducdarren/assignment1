@@ -14,6 +14,14 @@ public class TitlesList {
 	protected void addTitle(String title) {
 		this.addTitle(tokenize(title));
 	}
+	
+	protected LinkedList<String> getAllTitlesAsString() {
+		LinkedList<String> result = new LinkedList<String>();
+		for (LinkedList<String> stringList : titles) {
+			result.add(combine(stringList));
+		}
+		return result;
+	}
 	 
 	private LinkedList<String> tokenize(String input) {
 		return (LinkedList<String>) Arrays.asList(input.split("\\s+"));
