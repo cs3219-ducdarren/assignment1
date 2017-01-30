@@ -9,6 +9,9 @@ import ducdarren.kwic.implicit.logic.shifter.CircularShifter;
 import ducdarren.kwic.implicit.model.TitlesWrapper;
 
 public class KwicImplicitInvocation {
+	
+	private static final String TITLES_FILE = "data/titles.txt";
+	private static final String IGNORE_FILE = "data/ignore.txt";
 
 	private static TitlesWrapper titles;
 	private static TitlesWrapper circulars;
@@ -39,12 +42,7 @@ public class KwicImplicitInvocation {
 	}
 
 	public static void main(String[] args) {
-		if (args.length != 2) {
-			System.out.println("Error: Invalid number of arguments");
-			System.exit(1);
-		} else {
-			init(args[0], args[1]);
-			output.print(circulars);
-		}
+		init(TITLES_FILE, IGNORE_FILE);
+		output.print(circulars);
 	}
 }
