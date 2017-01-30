@@ -1,6 +1,6 @@
-package src.main.java.ducdarren.kwic.logic.commands;
+package main.java.ducdarren.kwic.logic.commands;
 
-import src.main.java.ducdarren.kwic.model.LineStorage;;
+import main.java.ducdarren.kwic.model.LineStorage;
 
 /**
  * Abstract Class for all Commands

@@ -1,4 +1,4 @@
-package src.main.java.ducdarren.kwic.model;
+package main.java.ducdarren.kwic.model;
 
 public class LineStorageManager implements LineStorage {
 

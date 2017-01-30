@@ -1,4 +1,4 @@
-package src.main.java.ducdarren.kwic.logic.commands;
+package main.java.ducdarren.kwic.logic.commands;
 
 public class PrintCommand extends Command {
 	

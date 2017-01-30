@@ -1,10 +1,10 @@
-package src.main.java.ducdarren.kwic.logic;
+package main.java.ducdarren.kwic.logic;
 
-import src.main.java.ducdarren.kwic.logic.commands.Command;
-import src.main.java.ducdarren.kwic.logic.commands.CommandResult;
-import src.main.java.ducdarren.kwic.model.LineStorage;
-import src.main.java.ducdarren.kwic.logic.parser.Parser;
-import src.main.java.ducdarren.kwic.model.LineStorageManager;
+import main.java.ducdarren.kwic.logic.commands.Command;
+import main.java.ducdarren.kwic.logic.commands.CommandResult;
+import main.java.ducdarren.kwic.model.LineStorage;
+import main.java.ducdarren.kwic.logic.parser.Parser;
+import main.java.ducdarren.kwic.model.LineStorageManager;
 
 public class Logic {
 	

@@ -1,14 +1,14 @@
-package src.main.java.ducdarren.kwic.logic.parser;
+package main.java.ducdarren.kwic.logic.parser;
 /**
  * repurpose from CS2103 sample code
  */
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import src.main.java.ducdarren.kwic.logic.commands.AddCommand;
-import src.main.java.ducdarren.kwic.logic.commands.Command;
-import src.main.java.ducdarren.kwic.logic.commands.InvalidCommand;
-import src.main.java.ducdarren.kwic.logic.commands.PrintCommand;
+import main.java.ducdarren.kwic.logic.commands.AddCommand;
+import main.java.ducdarren.kwic.logic.commands.Command;
+import main.java.ducdarren.kwic.logic.commands.InvalidCommand;
+import main.java.ducdarren.kwic.logic.commands.PrintCommand;
 
 public class Parser {
 	
