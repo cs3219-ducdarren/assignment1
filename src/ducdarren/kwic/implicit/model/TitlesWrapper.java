@@ -1,5 +1,6 @@
 package ducdarren.kwic.implicit.model;
 
+import java.util.LinkedList;
 import java.util.Observable;
 
 import ducdarren.kwic.implicit.commons.events.ListChangedEvent;
@@ -11,6 +12,10 @@ public class TitlesWrapper extends Observable {
 		titlesList.addTitle(title);
 		ListChangedEvent addedToListEvent = new ListChangedEvent();
 		broadcastChange(addedToListEvent);
+	}
+	
+	public LinkedList<String> getAllTitles() {
+		return titlesList.getAllTitlesAsString();
 	}
 	
 	private void broadcastChange(ListChangedEvent event) {
