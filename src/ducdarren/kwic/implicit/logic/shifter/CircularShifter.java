@@ -21,9 +21,21 @@ public class CircularShifter implements Observer{
 		// Get the last title i.e. just added
 		LinkedList<LinkedList<String>> titlesListRaw = titlesList.getAllTitlesRaw();
 		LinkedList<String> title = titlesListRaw.get(titlesListRaw.size() - 1);
+		// clone the list
+		LinkedList<String> toShift = new LinkedList<String>();
+		for (String s : title) {
+			toShift.addFirst(s);
+		}
 		// perform circular shifts
-		for (int i = 0; i < titlesListRaw.size(); i++) {
-			
+		for (int i = 0; i < toShift.size(); i++) {
+			if (ignoreList.contains(toShift.getFirst())) {
+				continue;
+			} else {
+				circularsList.addTitle(toShift);
+				String previousHead = toShift.getFirst();
+				toShift.removeFirst();
+				toShift.add(previousHead);
+			}
 		}
 
 	}
