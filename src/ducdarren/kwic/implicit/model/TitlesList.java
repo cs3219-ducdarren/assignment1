@@ -51,7 +51,7 @@ public class TitlesList {
 		StringBuilder sb = new StringBuilder();
 		for (String s : input) {
 		    sb.append(s);
-		    sb.append("\t");
+		    sb.append(" ");
 		}
 		return sb.toString();
 	}
