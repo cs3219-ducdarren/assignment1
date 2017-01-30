@@ -18,6 +18,10 @@ public class TitlesWrapper extends Observable {
 		return titlesList.getAllTitlesAsString();
 	}
 	
+	public LinkedList<LinkedList<String>> getAllTitlesRaw() {
+		return titlesList.getRawData();
+	}
+	
 	public void setData(LinkedList<String> newData) {
 		titlesList.setData(newData);
 	}

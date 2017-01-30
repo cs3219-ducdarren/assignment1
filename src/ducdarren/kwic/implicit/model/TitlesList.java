@@ -33,6 +33,10 @@ public class TitlesList {
 			titles.add(tokenize(s));
 		}
 	}
+	
+	protected LinkedList<LinkedList<String>> getRawData() {
+		return titles;
+	}
 	 
 	private LinkedList<String> tokenize(String input) {
 		return (LinkedList<String>) Arrays.asList(input.split("\\s+"));
