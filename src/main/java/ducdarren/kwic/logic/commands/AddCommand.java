@@ -14,7 +14,7 @@ public class AddCommand extends Command {
 	private final String toAdd;
 
 	public AddCommand(String title) {
-		// need to throw Error
+		// need error trapping
 		toAdd = title;
 	}
 
