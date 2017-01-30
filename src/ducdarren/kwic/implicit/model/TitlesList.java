@@ -1,4 +1,4 @@
-package ducdarren.kwic.model;
+package ducdarren.kwic.implicit.model;
 
 import java.util.ArrayList;
 

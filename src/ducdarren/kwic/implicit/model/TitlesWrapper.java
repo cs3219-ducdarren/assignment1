@@ -1,8 +1,8 @@
-package ducdarren.kwic.model;
+package ducdarren.kwic.implicit.model;
 
 import java.util.Observable;
 
-import ducdarren.kwic.commons.events.ListChangedEvent;
+import ducdarren.kwic.implicit.commons.events.ListChangedEvent;
 
 public class TitlesWrapper extends Observable {
 	TitlesList titlesList = new TitlesList();
