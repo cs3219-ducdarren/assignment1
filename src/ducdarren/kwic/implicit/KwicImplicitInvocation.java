@@ -33,6 +33,7 @@ public class KwicImplicitInvocation {
 		input = new Input();
 		output = new Output();
 		// Add circularShifter listener in titles
+		input.readIgnoreFile(IGNORE_FILE, ignoreList);
 		circularShifter = new CircularShifter(ignoreList, circulars);
 		titles.addObserver(circularShifter);
 		// Add alphabetizer listener in circulars
@@ -43,7 +44,6 @@ public class KwicImplicitInvocation {
 	public static void main(String[] args) {
 		init();
 		input.readTitleFile(TITLES_FILE, titles);
-		input.readIgnoreFile(IGNORE_FILE, ignoreList);
 		output.print(circulars);
 	}
 }

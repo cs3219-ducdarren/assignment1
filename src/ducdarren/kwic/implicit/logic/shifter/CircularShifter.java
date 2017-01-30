@@ -24,12 +24,14 @@ public class CircularShifter implements Observer{
 		// clone the list
 		LinkedList<String> toShift = new LinkedList<String>();
 		for (String s : title) {
-			toShift.addFirst(s);
+			toShift.add(s);
 		}
 		// perform circular shift
 		for (int i = 0; i < toShift.size(); i++) {
-			if (ignoreList.contains(toShift.getFirst())) {
-				continue;
+			if (isIgnore(toShift.getFirst())) {
+				String previousHead = toShift.getFirst();
+				toShift.removeFirst();
+				toShift.add(previousHead);
 			} else {
 				circularsList.addTitle(toShift);
 				String previousHead = toShift.getFirst();
@@ -37,6 +39,14 @@ public class CircularShifter implements Observer{
 				toShift.add(previousHead);
 			}
 		}
-
+	}
+	
+	private boolean isIgnore(String head) {
+		for (String s : ignoreList) {
+			if (s.equalsIgnoreCase(head)) {
+				return true;
+			}
+		}
+		return false;
 	}
 }
