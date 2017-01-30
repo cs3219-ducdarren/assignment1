@@ -10,9 +10,9 @@ import ducdarren.kwic.implicit.model.TitlesWrapper;
 public class Alphabetizer implements Observer{
 
   public void update(Observable source, Object data){
-    TitlesWrapper circulars = (TitlesWrapper) source;
-    LinkedList<String> currentList = circulars.getAllTitles();
+    TitlesWrapper circularsList = (TitlesWrapper) source;
+    LinkedList<String> currentList = circularsList.getAllTitles();
     Collections.sort(currentList);
-    circulars.setData(currentList);
+    circularsList.setData(currentList);
   }
 }
