@@ -1,6 +1,6 @@
 package main.java.ducdarren.kwic.logic.commands;
 
-import main.java.ducdarren.kwic.model.LineStorage;
+import main.java.ducdarren.kwic.model.DataFacade;
 
 /**
  * Abstract Class for all Commands
@@ -10,12 +10,12 @@ import main.java.ducdarren.kwic.model.LineStorage;
 
 public abstract class Command {
    
-   protected LineStorage linesInStorage; 
-   protected LineStorage circularsStorage; 
+   protected DataFacade linesInStorage; 
+   protected DataFacade circularsStorage; 
 
    public abstract CommandResult execute();
 
-   public void setStorages(LineStorage linesInStorage, LineStorage circularsStorage) {
+   public void setStorages(DataFacade linesInStorage, DataFacade circularsStorage) {
         this.linesInStorage = linesInStorage;
         this.circularsStorage = circularsStorage;
     }

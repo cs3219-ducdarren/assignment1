@@ -1,6 +1,6 @@
 package main.java.ducdarren.kwic.model;
 
-public class LineStorageManager implements LineStorage {
+public class DataStorage extends DataFacade {
 
 	@Override
 	public void addLine(String line) {
@@ -12,6 +12,12 @@ public class LineStorageManager implements LineStorage {
 	public void printCirculars() {
 		// TODO Auto-generated method stub
 
+	}
+
+	@Override
+	public void broadcastChangeEvent() {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

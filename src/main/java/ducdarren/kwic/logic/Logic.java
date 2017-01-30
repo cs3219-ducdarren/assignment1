@@ -4,9 +4,9 @@ import java.util.Scanner;
 
 import main.java.ducdarren.kwic.logic.commands.Command;
 import main.java.ducdarren.kwic.logic.commands.CommandResult;
-import main.java.ducdarren.kwic.model.LineStorage;
+import main.java.ducdarren.kwic.model.DataFacade;
 import main.java.ducdarren.kwic.logic.parser.Parser;
-import main.java.ducdarren.kwic.model.LineStorageManager;
+import main.java.ducdarren.kwic.model.DataStorage;
 
 public class Logic {
 	
@@ -14,8 +14,8 @@ public class Logic {
 			+ "Add: [add title-you-want-to-add]\n"
 			+ "Print: print\n";
 	private static final String SEPARATOR = "====================";
-	private static LineStorage linesInStorage;
-	private static LineStorage circularsStorage;
+	private static DataFacade linesInStorage;
+	private static DataFacade circularsStorage;
 	private static Parser parser;
 	private static Scanner scanner;
 
@@ -29,8 +29,8 @@ public class Logic {
 
     public static void main(String[] args) {
     	// init components
-    	linesInStorage = new LineStorageManager();
-        circularsStorage = new LineStorageManager();
+    	linesInStorage = new DataStorage();
+        circularsStorage = new DataStorage();
         parser = Parser.getInstance();
         scanner = new Scanner(System.in);
         // main loop
