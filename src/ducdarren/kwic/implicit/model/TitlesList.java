@@ -39,7 +39,12 @@ public class TitlesList {
 	}
 	 
 	private LinkedList<String> tokenize(String input) {
-		return (LinkedList<String>) Arrays.asList(input.split("\\s+"));
+		String[] tokens = input.split("\\s+");
+		LinkedList<String> result = new LinkedList<String>();
+		for (int i = 0; i < tokens.length; i++) {
+			result.add(tokens[i]);
+		}
+		return result;
 	}
 	
 	private String combine(LinkedList<String> input) {

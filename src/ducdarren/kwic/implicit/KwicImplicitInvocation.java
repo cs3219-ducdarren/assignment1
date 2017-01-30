@@ -23,18 +23,17 @@ public class KwicImplicitInvocation {
 	private static Input input;
 	private static Output output;
 
-	private static void init(String titlesFile, String ignoreFile) {
+	private static void init() {
 
 		// Databases
 		titles = new TitlesWrapper();
 		circulars = new TitlesWrapper();
+		ignoreList = new LinkedList<String>();
 		// I/O
 		input = new Input();
-		input.readTitleFile(titlesFile, titles);
-		input.readIgnoreFile(ignoreFile, ignoreList);
 		output = new Output();
 		// Add circularShifter listener in titles
-		circularShifter = new CircularShifter(null, circulars);
+		circularShifter = new CircularShifter(ignoreList, circulars);
 		titles.addObserver(circularShifter);
 		// Add alphabetizer listener in circulars
 		alphabetizer = new Alphabetizer();
@@ -42,7 +41,9 @@ public class KwicImplicitInvocation {
 	}
 
 	public static void main(String[] args) {
-		init(TITLES_FILE, IGNORE_FILE);
+		init();
+		input.readTitleFile(TITLES_FILE, titles);
+		input.readIgnoreFile(IGNORE_FILE, ignoreList);
 		output.print(circulars);
 	}
 }
