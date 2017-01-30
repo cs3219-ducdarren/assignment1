@@ -14,6 +14,12 @@ public class TitlesWrapper extends Observable {
 		broadcastChange(addedToListEvent);
 	}
 	
+	public void addTitle(LinkedList<String> title) {
+		titlesList.addTitle(title);
+		ListChangedEvent addedToListEvent = new ListChangedEvent();
+		broadcastChange(addedToListEvent);
+	}
+	
 	public LinkedList<String> getAllTitles() {
 		return titlesList.getAllTitlesAsString();
 	}
