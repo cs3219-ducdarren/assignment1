@@ -14,5 +14,13 @@ public abstract class Filter<I,O> {
         transform(this.pipeIn, this.pipeOut);
     }
     
+    public Pipe<I> getInPipe() {
+        return this.pipeIn;
+    }
+    
+    public Pipe<O> getOutPipe() {
+        return this.pipeOut;
+    }
+    
     protected abstract void transform(Pipe<I> in, Pipe<O> out);
 }
