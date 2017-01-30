@@ -98,6 +98,7 @@ For this implementation, I chose to do unit testing for CircularShifter and inte
 |[empty line]| nothing| ingore empty input|
 
 ***Integrated testing for CircularShifter & Alphabetizer***
+
 | Title | Expected Result| Remarks |
 |------|------------|-------------|
 |All CAPS| corectly sorted alphabetically| |
