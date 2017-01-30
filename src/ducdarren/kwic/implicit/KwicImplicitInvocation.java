@@ -1,5 +1,17 @@
 package ducdarren.kwic.implicit;
-
+/**
+ * @author A0144750J
+ * This class contains the main logic of the software
+ * It holds static reference to each component of the software
+ * It registers event-dispatchers and event-handlers
+ * 	1. CircularShifter listens for ListChangedEvents caused when
+ * 		a new title is added to titles. It will shift the new input
+ * 	2. Alphabetizer listens for ListChangedEvents caused when
+ * 		a newly shifted title is added to the list of circulars. 
+ * 		It will sort the new input
+ * It contains parameters to run the software
+ * 	1. File paths
+ */
 import java.util.LinkedList;
 
 import ducdarren.kwic.commons.io.Input;

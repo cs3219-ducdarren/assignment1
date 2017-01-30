@@ -1,5 +1,9 @@
 package ducdarren.kwic.commons.io;
-
+/**
+ * @author A0144570J
+ * This class handles the output of data 
+ * Currently it prints all shifted strings on the console
+ */
 import java.util.LinkedList;
 
 import ducdarren.kwic.implicit.model.TitlesWrapper;
