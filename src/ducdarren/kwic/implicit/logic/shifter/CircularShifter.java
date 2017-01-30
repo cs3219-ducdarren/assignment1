@@ -26,7 +26,7 @@ public class CircularShifter implements Observer{
 		for (String s : title) {
 			toShift.addFirst(s);
 		}
-		// perform circular shifts
+		// perform circular shift
 		for (int i = 0; i < toShift.size(); i++) {
 			if (ignoreList.contains(toShift.getFirst())) {
 				continue;
