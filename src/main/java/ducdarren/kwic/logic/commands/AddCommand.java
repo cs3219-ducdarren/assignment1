@@ -24,8 +24,7 @@ public class AddCommand extends Command {
     public CommandResult execute() {
         try {
             linesInStorage.addLine(toAdd);
-            return new CommandResult(
-                    String.format(MESSAGE_SUCCESS, toAdd)
+            return new CommandResult(String.format(MESSAGE_SUCCESS, toAdd));
         } catch (UniqueItemList.DuplicateItemException e) {
             return new CommandResult(MESSAGE_DUPLICATE_ITEM);
         }
