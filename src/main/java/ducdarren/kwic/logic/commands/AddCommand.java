@@ -1,4 +1,4 @@
-package ducdarren.kwic.logic.commands;
+package src.main.java.ducdarren.kwic.logic.commands;
 
 /**
  * Adds a person to the task book.
@@ -14,8 +14,8 @@ public class AddCommand extends Command {
 
     private final String toAdd;
     
-    public AddCommand(String title)
-            throws IllegalValueException {
+    public AddCommand(String title) {
+    	// need to throw Error
         toAdd = title;
     }
 

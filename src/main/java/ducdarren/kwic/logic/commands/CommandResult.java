@@ -1,4 +1,4 @@
-package ducdarren.kwic.logic.commands;
+package src.main.java.ducdarren.kwic.logic.commands;
 
 /**
  * Result of a command in form of user feedback (string)

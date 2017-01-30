@@ -1,7 +1,6 @@
-package ducdarren.kwic.logic.commands;
+package src.main.java.ducdarren.kwic.logic.commands;
 
-import java.util.ArrayList;
-import ducdarren.kwic.model.Model;
+import src.main.java.ducdarren.kwic.model.LineStorage;;
 
 /**
  * Abstract Class for all Commands
