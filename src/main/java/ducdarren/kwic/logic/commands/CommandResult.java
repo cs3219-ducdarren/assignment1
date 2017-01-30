@@ -12,5 +12,9 @@ public class CommandResult {
         assert userFeedBack != null;
         this.userFeedBack = userFeedBack;
 	}
+    
+    public String toString() {
+    	return userFeedBack;
+    }
 
 }
