@@ -1,5 +1,10 @@
 package ducdarren.kwic.implicit.logic.shifter;
-
+/**
+ * @author A0144750J
+ * This class handles the circular shift of a title following the KWIC principle
+ * Its main function is called when a ListChangedEvent is dispatched by the list
+ * of titles
+ */
 import java.util.LinkedList;
 import java.util.Observable;
 import java.util.Observer;
@@ -26,7 +31,7 @@ public class CircularShifter implements Observer{
 		for (String s : title) {
 			toShift.add(s);
 		}
-		// perform circular shift
+		// perform circular shift following KWIC principle
 		for (int i = 0; i < toShift.size(); i++) {
 			if (isIgnore(toShift.getFirst())) {
 				String previousHead = toShift.getFirst();
@@ -40,7 +45,7 @@ public class CircularShifter implements Observer{
 			}
 		}
 	}
-	
+	// helper function to scan for ingored words
 	private boolean isIgnore(String head) {
 		for (String s : ignoreList) {
 			if (s.equalsIgnoreCase(head)) {

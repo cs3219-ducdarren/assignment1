@@ -1,5 +1,10 @@
 package ducdarren.kwic.implicit.model;
-
+/**
+ * @author A0144750J
+ * This class is a wrapper class of TitlesList. It extends Obeservable
+ * It provides interface-level functionalities of adding/getting data
+ * It also dispatch ListChangedEvent whenever new data are added
+ */
 import java.util.LinkedList;
 import java.util.Observable;
 
