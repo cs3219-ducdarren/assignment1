@@ -9,15 +9,9 @@ public class DataStorage extends DataFacade {
 	}
 
 	@Override
-	public void printCirculars() {
+	public void getCirculars() {
 		// TODO Auto-generated method stub
 
-	}
-
-	@Override
-	public void broadcastChangeEvent() {
-		// TODO Auto-generated method stub
-		
 	}
 
 }
