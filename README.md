@@ -51,7 +51,7 @@ In this implementation, we use Java `Observable` class and `Observer` interface 
 
 The essential architecture of the software is explained in the following diagram:
 
-<img src="documents/ImplicitInvocationArchitecture.jpg" width="150"><br>
+<img src="documents/ImplicitInvocationArchitecture.jpg"><br>
 
 In this design, we have two **event dispatchers**:
 1. List of all original titles (input)
