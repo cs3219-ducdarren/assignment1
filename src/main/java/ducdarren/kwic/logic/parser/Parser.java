@@ -49,6 +49,6 @@ public class Parser {
     };
     
     private Command constructAddCommand(String arguments) {
-    	return null;
+        return new AddCommand(arguments);
     }
 }
