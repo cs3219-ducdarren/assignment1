@@ -8,6 +8,7 @@ import java.util.regex.Pattern;
 import src.main.java.ducdarren.kwic.logic.commands.AddCommand;
 import src.main.java.ducdarren.kwic.logic.commands.Command;
 import src.main.java.ducdarren.kwic.logic.commands.InvalidCommand;
+import src.main.java.ducdarren.kwic.logic.commands.PrintCommand;
 
 public class Parser {
 	
@@ -40,6 +41,9 @@ public class Parser {
         case AddCommand.COMMAND_WORD:
             toReturn = constructAddCommand(arguments);
             break;
+        case PrintCommand.COMMAND_WORD:
+        	toReturn = constructPrintCommand();
+        	break;
         default:
             toReturn = new InvalidCommand(MESSAGE_UNKNOWN_COMMAND);
             break;
@@ -50,5 +54,9 @@ public class Parser {
     
     private Command constructAddCommand(String arguments) {
         return new AddCommand(arguments);
+    }
+    
+    private Command constructPrintCommand() {
+        return new PrintCommand();
     }
 }
